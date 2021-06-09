@@ -1,3 +1,4 @@
+import re
 # Does a string contain a phone number?
 def has_phone_number(input_string):
     pass 
@@ -9,8 +10,10 @@ def get_phone_number(input_string):
 
 # Gets and returns all phone numbers from an inputed string
 def get_all_phone_numbers(input_string):
-    pass
-
+    phone_numbers = []
+    pattern = r"\d{3}-\d{3}-\d{4}"
+    phone_numbers += (re.findall(pattern, input_string))
+    return(phone_numbers)
 
 # Hide all numbers in a phone number except the last 4 digits. An example of this looks like: XXX-XXX-1234
 def hide_phone_numbers(input_string):
