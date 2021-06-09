@@ -30,9 +30,8 @@ def get_all_phone_numbers(input_string):
 def hide_phone_numbers(input_string):
     pattern = r"(\d{3})-(\d{3})-(\d{4})"
     replace_str = r"XXX-XXX-\g<3>"
-    hidden_phones = []
+    hidden_phones = ""
     hidden_phones += re.sub(pattern, replace_str, input_string)
-    print(hidden_phones)
     return hidden_phones
 
 
