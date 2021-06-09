@@ -28,9 +28,9 @@ class ValidatePhoneTestCases(unittest.TestCase):
         """When you call get_all_phone_numbers() with no phone numbers, you get an empty array back"""
         self.assertEqual(get_all_phone_numbers("please confirm your phone number: XXX-XXX-1422"), [])
 
-    # def test_hide_phone_numbers(self):
-    #     """When you call hide_phone_numbers(), it hides all the phone numbers"""
-    #     self.assertEqual(hide_phone_numbers("234-620-1422, 350-830-0744, 123-603-8762"), 'XXX-XXX-1422, XXX-XXX-0744, XXX-XXX-8762')
+    def test_hide_phone_numbers(self):
+        """When you call hide_phone_numbers(), it hides all the phone numbers"""
+        self.assertEqual(hide_phone_numbers("234-620-1422, 350-830-0744, 123-603-8762"), 'XXX-XXX-1422, XXX-XXX-0744, XXX-XXX-8762')
     
     # def test_format_phone_number(self):
     #     """When you call format_phone_number(), it formats all the phone numbers"""

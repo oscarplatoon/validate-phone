@@ -28,7 +28,12 @@ def get_all_phone_numbers(input_string):
 
 # Hide all numbers in a phone number except the last 4 digits. An example of this looks like: XXX-XXX-1234
 def hide_phone_numbers(input_string):
-    pass
+    pattern = r"(\d{3})-(\d{3})-(\d{4})"
+    replace_str = r"XXX-XXX-\g<3>"
+    hidden_phones = []
+    hidden_phones += re.sub(pattern, replace_str, input_string)
+    print(hidden_phones)
+    return hidden_phones
 
 
 # Get the string of the phone number and format it for our pretend application. Ensure all of the phone numbers use dashes for delimiters.
