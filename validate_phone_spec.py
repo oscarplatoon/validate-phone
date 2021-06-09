@@ -4,17 +4,17 @@ from validate_phone import *
 class ValidatePhoneTestCases(unittest.TestCase):
     """Tests for `validate_phone.py`."""
 
-    # def test_has_phone_number_true(self):
-    #     """When you call has_phone_number() with a legitimate phone number, you should get true"""
-    #     self.assertTrue(has_phone_number('my phone number: 111-222-3333'))
+    def test_has_phone_number_true(self):
+        """When you call has_phone_number() with a legitimate phone number, you should get true"""
+        self.assertTrue(has_phone_number('my phone number: 111-222-3333'))
 
-    # def test_has_phone_number_false(self):
-    #     """When you call has_phone_number() with a bad phone number, you should get false"""
-    #     self.assertFalse(has_phone_number('please confirm your phone number: XXX-XXX-1234'))
+    def test_has_phone_number_false(self):
+        """When you call has_phone_number() with a bad phone number, you should get false"""
+        self.assertFalse(has_phone_number('please confirm your phone number: XXX-XXX-1234'))
 
-    # def test_get_phone_number(self):
-    #     """When you call get_phone_number() with a good phone number, you should get the phone number"""
-    #     self.assertEqual(get_phone_number("please don't share this: 999-888-1234"), '999-888-1234')
+    def test_get_phone_number(self):
+        """When you call get_phone_number() with a good phone number, you should get the phone number"""
+        self.assertEqual(get_phone_number("please don't share this: 999-888-1234"), '999-888-1234')
 
     # def test_get_phone_number_none(self):
     #     """When you call get_phone_number() with a bad phone number, you should get None"""

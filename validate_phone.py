@@ -1,7 +1,12 @@
 import re
+
 # Does a string contain a phone number?
 def has_phone_number(input_string):
-    pass 
+    pattern = r"\d{3}-\d{3}-\d{4}"
+    if re.search(pattern, input_string):
+        return True
+    return False
+    
 
 # Get a phone number back from a string
 def get_phone_number(input_string):
