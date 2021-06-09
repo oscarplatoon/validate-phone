@@ -16,9 +16,9 @@ class ValidatePhoneTestCases(unittest.TestCase):
         """When you call get_phone_number() with a good phone number, you should get the phone number"""
         self.assertEqual(get_phone_number("please don't share this: 999-888-1234"), '999-888-1234')
 
-    # def test_get_phone_number_none(self):
-    #     """When you call get_phone_number() with a bad phone number, you should get None"""
-    #     self.assertEqual(get_phone_number("please confirm your phone number: XXX-XXX-1234"), None)
+    def test_get_phone_number_none(self):
+        """When you call get_phone_number() with a bad phone number, you should get None"""
+        self.assertEqual(get_phone_number("please confirm your phone number: XXX-XXX-1234"), None)
     
     def test_get_all_phone_numbers(self):
         """When you call get_all_phone_numbers(), you get all the phone numbers back"""

@@ -10,7 +10,13 @@ def has_phone_number(input_string):
 
 # Get a phone number back from a string
 def get_phone_number(input_string):
-    pass
+    phone_number = ""
+    pattern = r"\d{3}-\d{3}-\d{4}"
+    # Need the .group(0) to get the matched string for return. Could use match?
+    try:
+        phone_number = (re.search(pattern, input_string)).group(0)
+    except: return None #Try/Except handles none case.
+    return phone_number
 
 
 # Gets and returns all phone numbers from an inputed string
