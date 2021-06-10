@@ -32,9 +32,9 @@ class ValidatePhoneTestCases(unittest.TestCase):
         """When you call hide_phone_numbers(), it hides all the phone numbers"""
         self.assertEqual(hide_phone_numbers("234-620-1422, 350-830-0744, 123-603-8762"), 'XXX-XXX-1422, XXX-XXX-0744, XXX-XXX-8762')
     
-    # def test_format_phone_number(self):
-    #     """When you call format_phone_number(), it formats all the phone numbers"""
-    #     self.assertEqual(format_phone_number("(312) 454.9323, 3112223333, 350.820.0744, 123-630-8762"), '312-454-9323, 311-222-3333, 350-820-0744, 123-630-8762')
+    def test_format_phone_number(self):
+        """When you call format_phone_number(), it formats all the phone numbers"""
+        self.assertEqual(format_phone_number("(312) 454.9323, 3112223333, 350.820.0744, 123-630-8762"), '312-454-9323, 311-222-3333, 350-820-0744, 123-630-8762')
 
 if __name__ == '__main__':
     unittest.main()

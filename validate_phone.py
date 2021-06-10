@@ -38,4 +38,11 @@ def hide_phone_numbers(input_string):
 # Get the string of the phone number and format it for our pretend application. Ensure all of the phone numbers use dashes for delimiters.
 # Example: 312-111-2222, 312.111.2222, (312) 111-2222 would all be 312-111-2222
 def format_phone_number(input_string):
-    pass
+    pattern = r".?(\d{3}).?.?(\d{3}).?(\d{4})"
+    replace_str = r"\g<1>-\g<2>-\g<3>"
+    reformated_phones = ""
+    reformated_phones += re.sub(pattern, replace_str, input_string)
+    return reformated_phones
+
+# The grossest Regex: (((\d{3})[\S?](\d{3})[\S?](\d{4}))|(\d{3}).?(\d{3}).?(\d{4}))
+# .?(\d{3}).?.?(\d{3}).?(\d{4})
