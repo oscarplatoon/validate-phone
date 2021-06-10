@@ -42,7 +42,11 @@ def format_phone_number(input_string):
     replace_str = r"\g<1>-\g<2>-\g<3>"
     reformated_phones = ""
     reformated_phones += re.sub(pattern, replace_str, input_string)
-    return reformated_phones
+    # This works, but is likely not the best way to solve this.
+    reformated_phones_with_spaces = ""
+    # Sub ###-###-####,###... with ", " to get the output to the expected.
+    reformated_phones_with_spaces = re.sub(',', ', ', reformated_phones)
+    return reformated_phones_with_spaces
 
 # The grossest Regex: (((\d{3})[\S?](\d{3})[\S?](\d{4}))|(\d{3}).?(\d{3}).?(\d{4}))
 # .?(\d{3}).?.?(\d{3}).?(\d{4})
